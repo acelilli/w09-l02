@@ -1,5 +1,5 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import fantasy from "../../fantasy.json";
+import Fantasy from "../books/fantasy.json";
 // import scifi from "../data/books/scifi.json";
 // import history from "../data/books/history.json";
 // import romance from "../data/books/romance.json";
@@ -11,12 +11,20 @@ const AllTheBooks = (fantasy) => {
       <Row className="justify-content-md-center">
         {/* Row divise per generi: FANTASY */}
         {/* PRIMO MAP: JSON FANTASY */}
-        {fantasy.map((book) => (
-          <Col md={4}>
-            <Card key={book.asin}>
-              <Card.Img variant="top" src={book.img} />
+        {Fantasy.map((book) => (
+          <Col md={3}>
+            <Card key={book.asin} style={{ height: "500px", marginBottom: "2rem" }}>
+              <Card.Img
+                variant="top"
+                src={book.img}
+                alt="Book Cover"
+                className="img-contain"
+                style={{ height: "70%" }}
+              />
               <Card.Body>
-                <Card.Title>{book.title}</Card.Title>
+                <Card.Title style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                  {book.title}
+                </Card.Title>
                 <Card.Text>
                   <p>- {book.price}</p>
                 </Card.Text>
