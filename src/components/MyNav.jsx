@@ -1,8 +1,8 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 
 const MyNav = ({ brand, claim }) => (
-  <Navbar expand="lg" bg="danger" data-bs-theme="dark">
-    <Container>
+  <Navbar expand="lg" bg="danger" data-bs-theme="dark" className="mb-md-4">
+    <Container fluid="md">
       <Navbar.Brand href="#home">
         {brand} - {claim}
       </Navbar.Brand>

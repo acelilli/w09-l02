@@ -8,11 +8,40 @@ import MyNav from "./components/MyNav";
 // import Navbar from "react-bootstrap/Navbar";
 // import NavDropdown from "react-bootstrap/NavDropdown";
 //NB: se volessi creare la navbar attraverso un component NON posso chimarla Navbar a causa del conflitto con boostrap
+import MyAlert from "./components/Welcome";
+import MyFooter from "./components/MyFooter";
+import Welcome from "./components/Welcome";
+// import AllTheBooks from "./components/AllTheBooks";
 
 function App() {
   return (
     <div className="App">
-      <MyNav brand="Esercizio" claim="Week 09 Lesson 02" />
+      <MyNav brand="Bookshop" claim="Week 09 Lesson 02" />
+      <Welcome />
+      {/* <AllTheBooks/> */}
+      <MyFooter
+        content1={
+          <ul>
+            <li>Testo col 1</li>
+            <li>Testo col 1</li>
+            <li>Testo col 1</li>
+          </ul>
+        }
+        content2={
+          <ul>
+            <li>Testo col 2</li>
+            <li>Testo col 2</li>
+            <li>Testo col 2</li>
+          </ul>
+        }
+        content3={
+          <ul>
+            <li>Testo col 3</li>
+            <li>Testo col 3</li>
+            <li>Testo col 3</li>
+          </ul>
+        }
+      />
     </div>
   );
 }
