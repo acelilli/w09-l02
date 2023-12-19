@@ -11,14 +11,14 @@ import MyNav from "./components/MyNav";
 import MyAlert from "./components/Welcome";
 import MyFooter from "./components/MyFooter";
 import Welcome from "./components/Welcome";
-// import AllTheBooks from "./components/AllTheBooks";
+import AllTheBooks from "./components/AllTheBooks";
 
 function App() {
   return (
     <div className="App">
       <MyNav brand="Bookshop" claim="Week 09 Lesson 02" />
       <Welcome />
-      {/* <AllTheBooks/> */}
+      <AllTheBooks />
       <MyFooter
         content1={
           <ul>
